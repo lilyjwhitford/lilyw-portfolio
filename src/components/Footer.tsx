@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <div>Footer Component</div>
+  return (
+    <div>
+      <p>© Lily Whitford | 2025</p>
+    </div>
+  )
 };

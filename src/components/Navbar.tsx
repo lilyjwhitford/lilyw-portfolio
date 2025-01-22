@@ -1,3 +1,11 @@
 export default function NavBar() {
-  return <div>NavBar Component</div>
+  return (
+  <div>
+    <ul>
+      <li>about</li>
+      <li>projects</li>
+      <li>contact</li>
+    </ul>
+  </div>
+  );
 };

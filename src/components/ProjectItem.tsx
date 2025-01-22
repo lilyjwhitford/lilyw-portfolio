@@ -1,9 +1,11 @@
 export default function ProjectItem() {
   return (
   <div>
-    <p>ProjectItem Components</p>
-    <p>ProjectItem Components</p>
-    <p>ProjectItem Components</p>
+    <ul>
+      <li>mrkt</li>
+      <li>wikimap</li>
+      <li>photolabs</li>
+    </ul>
   </div>
   )
 };
