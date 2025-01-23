@@ -1,4 +1,6 @@
-export default function ProjectItem() {
+import React from 'react';
+
+const ProjectItem: React.FC = () => {
   return (
   <div>
     <ul>
@@ -9,3 +11,5 @@ export default function ProjectItem() {
   </div>
   )
 };
+
+export default ProjectItem;
