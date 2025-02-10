@@ -1,20 +1,45 @@
-import React from 'react';
-import NavBarItem from './NavBarItem';
+import React, { useState, useEffect } from 'react';
+import {
+  Navbar, 
+  NavbarBrand, 
+  NavbarContent, 
+  NavbarItem
+} from "@heroui/react";
 
 const NavBar: React.FC = () => {
-  const navItems = [
-    { label: 'Home', to: 'hero' },
-    { label: 'About', to: 'about' },
-    { label: 'Projects', to: 'projects' },
-    { label: 'Contact', to: 'contact' },
-  ];
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="flex justify-around bg-gray-600 text-white py-4">
-      {navItems.map((item) => (
-        <NavBarItem key={item.to} label={item.label} to={item.to} />
-      ))}
-    </nav>
+    <Navbar
+      isBlurred
+      isBordered
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "bg-white/70 shadow-md backdrop-blur-lg" : "bg-transparent"}`}
+      >
+        <NavbarBrand>
+          <a href="#home" className="text-xl font-bold text-gray-900">lily</a>
+        </NavbarBrand>
+
+        <NavbarContent className="hidden md:flex gap-6" justify="end">
+          {["home", "about", "projects", "contact"].map((label) => (
+            <NavbarItem key={label}>
+              <a href={`#${label}`} className="cursor-pointer text-gray-800 hover:text-gray-400 transition">{label}</a>
+            </NavbarItem>
+            ))}
+        </NavbarContent>
+    </Navbar>
   );
 };
 

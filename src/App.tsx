@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <div className="App">
         <main>
           <NavBar />
-          <div id="hero">
+          <div id="home">
             <Hero />
           </div>
           <div id="about">
