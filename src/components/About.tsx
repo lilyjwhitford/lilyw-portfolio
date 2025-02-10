@@ -49,23 +49,23 @@ const logos: Record<string, Logo> = {
 
 const About: React.FC = () => {
   return (
-    <section className="min-h-screen px-6 lg:px-16 py-12 flex flex-col items-center justify-center ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-        <div className="flex flex-col items-center">
-          <h2 className="text-4xl font-bold pr-6">About Me</h2>
+    <section className="min-h-screen px-6 lg:px-10 py-16 flex flex-col items-center justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="flex justify-center">
           <img
             src={itMe}
             alt="that me -_-"
-            className="w-1/2 h-1/2 object-contain"
+            className="w-3/4 max-w-sm object-contain"
           ></img>
         </div>
-        <div className="text-gray-600 max-w-2xl -mt-10 ">
-          <p className="mb-4">
+        <div className="text-gray-600 max-w-lg -mt-6 justify-self-start">
+        <h2 className="text-4xl font-bold py-6">About Me</h2>
+          <p>
             Hello, friend! I'm Lily, I'm a web developer whose passion for
             coding began in Tumblr's prime era of 2013, where I would create
             custom themes with HTML and CSS.
           </p>
-          <p>
+          <p className="mt-4">
             What started as a way to express myself online quickly turned into a
             drive to build and create in a meaningful way, transforming my
             internet addiction into valuable skills. Since then, I've been
@@ -99,7 +99,7 @@ const About: React.FC = () => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <div className="relative flex items-center justify-center h-24 w-24 bg-white shadow-md rounded-full p-4">
+              <div className="relative flex items-center justify-center h-24 w-24 p-4">
                 <img
                   src={logo.src}
                   alt={logo.alt}
