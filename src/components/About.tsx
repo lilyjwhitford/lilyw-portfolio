@@ -1,11 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
+
 import jsLogo from "../assets/jsLogo.png";
 import reactLogo from "../assets/reactLogo.png";
 import tailwindcssLogo from "../assets/tailwindcssLogo.png";
 import nodejsLogo from "../assets/nodejsLogo.png";
 import tsLogo from "../assets/tsLogo.png";
 import postgresqlLogo from "../assets/postgresqlLogo.png";
+import figmaLogo from "../assets/figmaLogo.png";
+import gitLogo from "../assets/gitLogo.png";
 import itMe from "../assets/itMe.png";
 
 type Logo = {
@@ -45,75 +50,82 @@ const logos: Record<string, Logo> = {
     alt: "PostgreSQL",
     title: "PostgreSQL",
   },
+  figma: {
+    src: figmaLogo,
+    alt: "Figma",
+    title: "Figma",
+  },
+  git: {
+    src: gitLogo,
+    alt: "Git",
+    title: "Git",
+  },
 };
 
 const About: React.FC = () => {
   return (
     <section className="min-h-screen px-6 lg:px-10 py-16 flex flex-col items-center justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
         <div className="flex justify-center">
           <motion.img
             src={itMe}
             alt="that me -_-"
-            className="w-3/4 max-w-sm object-contain"
+            className="w-2/3 h-auto object-contain"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-          ></motion.img>
+          />
         </div>
-        <div className="text-gray-600 max-w-lg -mt-6 justify-self-start">
-        <h2 className="text-4xl font-bold py-8">about me</h2>
-          <p>
-            Hello, friend! I'm Lily, I'm a web developer whose passion for
-            coding began in Tumblr's prime era of 2013, where I would create
-            custom themes with HTML and CSS.
-          </p>
-          <p className="mt-4">
-            What started as a way to express myself online quickly turned into a
-            drive to build and create in a meaningful way, transforming my
-            internet addiction into valuable skills. Since then, I've been
-            sharpening my skills in front-end development and embracing new
-            technologies with each project. When I'm not coding, you can find me
-            exploring new restaurants with friends, hitting the gym, or
-            critiquing movies on Letterboxd!
-          </p>
+        <div className="text-gray-600 max-w-lg flex items-end flex-col gap-6">
+          <div className="flex items-center">
+            <span className="block w-64 h-px bg-gray-400 mr-3"></span>
+            <h2 className="text-4xl font-bold py-8">about me</h2>
+            <FontAwesomeIcon icon={faStar} className="text-2xl px-3" />
+          </div>
+          <div className="flex flex-col gap-2 text-right">
+            <p>
+              Hello, friend! I'm Lily, a{" "}
+              <span className="text-red-400">web developer</span> whose passion for coding began in Tumblr's prime era of 2013,
+              where I would create custom themes with{" "}
+              <span className="text-red-400">HTML</span> and{" "}
+              <span className="text-red-400">CSS</span>.
+            </p>
+            <p className="mt-4">
+              What started as a way to express myself online quickly turned into a drive to build
+              and create in a meaningful way, transforming my internet addiction into valuable
+              skills. Since then, I've been sharpening my skills in front-end development and
+              embracing new technologies with each project. When I'm not coding, you can find me
+              exploring new restaurants with friends, hitting the gym, or critiquing movies on
+              Letterboxd!
+            </p>
+          </div>
         </div>
       </div>
-      <p className="mt-12 flex flex-col items-center">
+
+      {/* technologies section */}
+      <p className="mt-12 flex flex-col items-center font-bold text-gray-600 text-xl">
         these are some technologies I enjoy:
       </p>
-      <div className="flex flex-row items-center">
-        <motion.div
-          className="flex flex-row gap-8 mt-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
-          }}
-        >
-          {Object.entries(logos).map(([key, logo]) => (
-            <motion.div
-              key={key}
-              className="flex flex-col items-center"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="relative flex items-center justify-center h-24 w-24 p-4">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <p className="text-center mt-4 text-sm font-medium text-gray-700 pb-6">
-                {logo.title}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
+      <div className="mt-6 grid grid-cols-4 gap-4">
+        {Object.entries(logos).map(([key, logo]) => (
+          <motion.div
+            key={key}
+            className="flex items-center border border-gray-300 rounded-md py-1 px-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 1.0 } }}
+            viewport={{ once: true, amount: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="w-12 h-12 mr-2">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-full w-full object-contain filter grayscale brightness-75"
+              />
+            </div>
+            <p className="text-gray-700 text-sm font-medium">{logo.title}</p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
