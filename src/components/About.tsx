@@ -52,14 +52,16 @@ const About: React.FC = () => {
     <section className="min-h-screen px-6 lg:px-10 py-16 flex flex-col items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center">
-          <img
+          <motion.img
             src={itMe}
             alt="that me -_-"
             className="w-3/4 max-w-sm object-contain"
-          ></img>
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          ></motion.img>
         </div>
         <div className="text-gray-600 max-w-lg -mt-6 justify-self-start">
-        <h2 className="text-4xl font-bold py-6">About Me</h2>
+        <h2 className="text-4xl font-bold py-8">about me</h2>
           <p>
             Hello, friend! I'm Lily, I'm a web developer whose passion for
             coding began in Tumblr's prime era of 2013, where I would create
@@ -77,7 +79,7 @@ const About: React.FC = () => {
         </div>
       </div>
       <p className="mt-12 flex flex-col items-center">
-        These are some technologies I enjoy:
+        these are some technologies I enjoy:
       </p>
       <div className="flex flex-row items-center">
         <motion.div
@@ -106,7 +108,7 @@ const About: React.FC = () => {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <p className="text-center mt-4 text-sm font-medium text-gray-700">
+              <p className="text-center mt-4 text-sm font-medium text-gray-700 pb-6">
                 {logo.title}
               </p>
             </motion.div>

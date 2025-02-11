@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       <motion.div initial="hidden" animate="visible" variants={fadeUpVariants}>
         <motion.h1 variants={fadeUpVariants} className="text-6xl font-semibold text-gray-700">Hi, I'm Lily :)</motion.h1>
         <motion.h1 variants={fadeUpVariants} className="text-7xl font-bold text-gray-800 pt-2">Full-Stack Web Developer</motion.h1>
-        <motion.p variants={fadeUpVariants} className="text-xl text-gray-700 pt-2 text-left">Passionate about designing seamless user experiences,</motion.p>
+        <motion.p variants={fadeUpVariants} className="text-xl text-gray-700 pt-2 text-left">Passionate about designing seamless user experiences.</motion.p>
       </motion.div>
     </section>
   );

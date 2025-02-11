@@ -21,14 +21,16 @@ export const projects = [
     techStack: "React, Express, TailwindCSS",
     images: [mrkt1, mrkt2, mrkt3, mrkt4, mrkt5, mrkt6],
     platform: "mobile",
+    github: "https://github.com/lilyjwhitford/final-project",
   },
   {
     id: 2,
     name: "Lost&Confused",
-    description: "Wiki-maps project.",
+    description: "Wiki-map project.",
     techStack: "Javascript, Express, SaSS",
     images: [lnf1, lnf2, lnf3, lnf4],
     platform: "desktop",
+    github: "https://github.com/lilyjwhitford/Wiki-Map",
   },
   {
     id: 3,
@@ -37,5 +39,6 @@ export const projects = [
     techStack: "React, idk, idk",
     images: [pl1, pl2, pl3, pl4],
     platform: "desktop",
+    github: "https://github.com/lilyjwhitford/PhotoLabs",
   },
 ];
