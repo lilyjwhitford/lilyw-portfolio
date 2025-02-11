@@ -65,7 +65,7 @@ const logos: Record<string, Logo> = {
 const About: React.FC = () => {
   return (
     <section className="min-h-screen px-6 lg:px-10 py-16 flex flex-col items-center justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center mb-16">
         <div className="flex justify-center">
           <motion.img
             src={itMe}
@@ -77,17 +77,17 @@ const About: React.FC = () => {
         </div>
         <div className="text-gray-600 max-w-lg flex items-end flex-col gap-6">
           <div className="flex items-center">
-            <span className="block w-64 h-px bg-gray-400 mr-3"></span>
-            <h2 className="text-4xl font-bold py-8">about me</h2>
+            <span className="block w-60 h-px mt-10 bg-gray-400 mr-3"></span>
+            <h2 className="text-5xl font-bold pb-8 pt-16">about me</h2>
             <FontAwesomeIcon icon={faStar} className="text-2xl px-3" />
           </div>
           <div className="flex flex-col gap-2 text-right">
             <p>
               Hello, friend! I'm Lily, a{" "}
-              <span className="text-red-400">web developer</span> whose passion for coding began in Tumblr's prime era of 2013,
+              <span className="text-[#e2a48f]">web developer</span> whose passion for coding began in Tumblr's prime era of 2013,
               where I would create custom themes with{" "}
-              <span className="text-red-400">HTML</span> and{" "}
-              <span className="text-red-400">CSS</span>.
+              <span className="text-[#e2a48f]">HTML</span> and{" "}
+              <span className="text-[#e2a48f]">CSS</span>.
             </p>
             <p className="mt-4">
               What started as a way to express myself online quickly turned into a drive to build
@@ -102,9 +102,13 @@ const About: React.FC = () => {
       </div>
 
       {/* technologies section */}
-      <p className="mt-12 flex flex-col items-center font-bold text-gray-600 text-xl">
-        these are some technologies I enjoy:
-      </p>
+      <div className="mt-12 flex items-center">
+        <div className="block w-60 h-px bg-gray-400"></div>
+        <p className="mx-4 font-bold text-gray-600 text-xl whitespace-nowrap">
+          these are some technologies I enjoy:
+        </p>
+        <div className="block w-60 h-px bg-gray-400"></div>
+      </div>
       <div className="mt-6 grid grid-cols-4 gap-4">
         {Object.entries(logos).map(([key, logo]) => (
           <motion.div
