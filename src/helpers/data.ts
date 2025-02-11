@@ -17,8 +17,8 @@ export const projects = [
   {
     id: 1,
     name: "Mrkt",
-    description: "Online farmers market.",
-    techStack: "React, Express, TailwindCSS",
+    description: "Mrkt is a full-stack mobile mirtual farmers market allowing users to shop local vendors from the comfort of their own home. Users can arrange for pick up or delivery of their items at a time convenient to them via live chat. Mrkt allows vendors and local producers of any size to reach a large customer base with ease and convenience.",
+    techStack: "React, Express, Node.js, TailwindCSS, Socket.io, PostgreSQL, Leaflet.js",
     images: [mrkt1, mrkt2, mrkt3, mrkt4, mrkt5, mrkt6],
     platform: "mobile",
     github: "https://github.com/lilyjwhitford/final-project",
@@ -26,8 +26,8 @@ export const projects = [
   {
     id: 2,
     name: "Lost&Confused",
-    description: "Wiki-map project.",
-    techStack: "Javascript, Express, SaSS",
+    description: "Lost&Confused is a full-stack web application that allows users to collaboratively create and edit maps. Users can add points of interest to their maps, which are then displayed on a shared map, and add maps to their favourites. Lost&Confused is designed to be a fun and interactive way to share information about interesting locations.",
+    techStack: "Javascript, Express, Node.js, SaSS, PostgreSQL, Leaflet.js",
     images: [lnf1, lnf2, lnf3, lnf4],
     platform: "desktop",
     github: "https://github.com/lilyjwhitford/Wiki-Map",
@@ -35,8 +35,8 @@ export const projects = [
   {
     id: 3,
     name: "PhotoLabs",
-    description: "PhotoLabs Project",
-    techStack: "React, idk, idk",
+    description: "PhotoLabs is an engaging React-based single-page application (SPA) designed to offer users an immersive photo-viewing experience. By leveraging a pre-existing API, we can craft an interactive frontend where users can explore and interact with a variety of photos.",
+    techStack: "React, Express, PostgreSQL, Node.js, SaSS",
     images: [pl1, pl2, pl3, pl4],
     platform: "desktop",
     github: "https://github.com/lilyjwhitford/PhotoLabs",
