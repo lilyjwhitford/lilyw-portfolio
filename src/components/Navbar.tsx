@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "bg-white/70 shadow-md backdrop-blur-lg" : "bg-transparent"}`}
       >
         <NavbarBrand>
-          <a href="#home" className="text-xl font-bold text-gray-900">lily</a>
+          <a href="#home" className="text-xl font-bold text-gray-800">lily whitford</a>
         </NavbarBrand>
 
         <NavbarContent className="hidden md:flex gap-6" justify="end">
