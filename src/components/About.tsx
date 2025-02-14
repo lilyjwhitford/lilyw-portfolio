@@ -79,7 +79,7 @@ const About: React.FC = () => {
           <div className="flex items-center">
             <span className="block w-60 h-px mt-10 bg-gray-400 mr-3"></span>
             <h2 className="text-5xl font-bold pb-8 pt-16">about me</h2>
-            <FontAwesomeIcon icon={faStar} className="text-2xl px-3" />
+            <FontAwesomeIcon icon={faStar} className="text-2xl mt-8 ml-2"/>
           </div>
           <div className="flex flex-col gap-2 text-right">
             <p>
@@ -91,10 +91,9 @@ const About: React.FC = () => {
             </p>
             <p className="mt-4">
               What started as a way to express myself online quickly turned into a drive to build
-              and create in a meaningful way, transforming my internet addiction into valuable
-              skills. Since then, I've been sharpening my skills in front-end development and
+              and create in a meaningful way, transforming my internet addiction into an awesome career. Since then, I've been sharpening my skills in front-end development and
               embracing new technologies with each project. When I'm not coding, you can find me
-              exploring new restaurants with friends, hitting the gym, or critiquing movies on
+              exploring new restaurants, hitting the gym, or critiquing movies on
               Letterboxd!
             </p>
           </div>
@@ -117,7 +116,7 @@ const About: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1.0 } }}
             viewport={{ once: true, amount: 0.5 }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, backgroundColor: "#fcdad0" }}
             transition={{ duration: 0.3 }}
           >
             <div className="w-12 h-12 mr-2">
