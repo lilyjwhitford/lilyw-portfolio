@@ -37,7 +37,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   const opposite = name === "Lost&Confused";
 
   // add extra spacing for Mrkt
-  const extraSpacing = name === "Mrkt" ? "lg:gap-20" : "lg:gap-16";
+  const extraSpacing = name === "Mrkt" ? "lg:gap-20 pb-32" : "lg:gap-16";
 
   // keep text right-aligned for Mrkt and Photolabs
   const isRightAligned = name === "Mrkt" || name === "PhotoLabs";
@@ -60,7 +60,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="absolute w-full h-full flex items-center justify-center z-10"
           >
-           <div className="p-2 border border-gray-300 shadow-md rounded-xl">
+           <div className="p-2 border border-gray-300 shadow-md rounded-2xl">
       <motion.img
         src={images[currentIndex]}
         alt={name}
@@ -87,9 +87,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       <div className={`flex-1`}>
         <div className="bg-gradient-to-br from-[#f9e9df] to-[#ecbfb1] p-6 rounded-xl inline-block">
           <div className={`flex flex-col gap-4 ${opposite ? "items-start" : "items-end"}`}>
-            <h3 className="text-gray-800 text-2xl font-bold">{name}</h3>
+            <h3 className="text-gray-700 text-3xl font-bold">{name}</h3>
             <p className="text-gray-600">{description}</p>
-            <p className="text-gray-800 font-medium">{techStack}</p>
+            <p className="text-white font-medium">{techStack}</p>
             <a
               href={github}
               target="_blank"
