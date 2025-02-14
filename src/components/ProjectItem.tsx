@@ -85,7 +85,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       </div>
 
       <div className={`flex-1`}>
-        <div className="bg-gradient-to-br from-[#f9e9df] to-[#ecbfb1] p-6 rounded-xl inline-block">
+        <div className="bg-gradient-to-br from-[#f9e9df] to-[#ecbfb1] p-6 rounded-3xl inline-block">
           <div className={`flex flex-col gap-4 ${opposite ? "items-start" : "items-end"}`}>
             <h3 className="text-gray-700 text-3xl font-bold">{name}</h3>
             <p className="text-gray-600">{description}</p>
