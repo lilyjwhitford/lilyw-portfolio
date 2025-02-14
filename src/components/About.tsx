@@ -69,7 +69,7 @@ const About: React.FC = () => {
         <div className="flex justify-center">
           <motion.img
             src={itMe}
-            alt="that me -_-"
+            alt="picture of me holding flowers"
             className="w-2/3 h-auto object-contain"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
