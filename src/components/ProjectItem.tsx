@@ -61,15 +61,14 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             className="absolute w-full h-full flex items-center justify-center z-10"
           >
            <div className="p-2 border border-gray-300 shadow-md rounded-2xl">
-      <motion.img
-        src={images[currentIndex]}
-        alt={name}
-        className="w-auto h-auto object-contain rounded-xl"
-      />
-    </div>
+            <motion.img
+              src={images[currentIndex]}
+              alt={name}
+              className="w-auto h-auto object-contain rounded-xl"
+            />
+          </div>
           </motion.div>
         </AnimatePresence>
-
         <button
           className="absolute top-1/2 left-[-3rem] -translate-y-1/2 text-white bg-[#ecbfb1] rounded-full p-1 z-10 hover:bg-[#e2b0a1] transition"
           onClick={prevImage}
