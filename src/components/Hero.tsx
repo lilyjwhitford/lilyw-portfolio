@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const fadeUpVariants = {
   hidden: { opacity: 0.01, y: 20 },
@@ -18,8 +20,8 @@ const Hero: React.FC = () => {
           variants={fadeUpVariants}
           className="text-6xl font-semibold text-gray-700"
         >
-          Hi, I'm{" "}
-          <span className="text-[#ecbfb1]">Lily!</span>
+          Hi! I'm{" "}
+          <span className="text-[#ecbfb1]">Lily</span>
         </motion.h1>
         <motion.h1
           variants={fadeUpVariants}
@@ -33,6 +35,13 @@ const Hero: React.FC = () => {
         >
           Passionate about designing seamless user experiences.
         </motion.p>
+        <motion.p
+          variants={fadeUpVariants}
+          className="text-xl text-gray-700 pt-2 text-left"
+        >
+          <FontAwesomeIcon icon={faLocationDot} className="text-[#ecbfb1]" />{" "}
+          Vancouver, BC
+        </motion.p>
       </motion.div>
 
       <motion.a
@@ -40,7 +49,7 @@ const Hero: React.FC = () => {
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 1.25, repeat: Infinity, ease: "easeInOut" }}
         whileHover={{ scale: 1.2, y: -3 }}
-        className="mt-8 inline-block bg-[#ecbfb1] text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300"
+        className="mt-8 inline-block bg-[#ecbfb1] text-white font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300"
       >
         get to know me!
       </motion.a>
