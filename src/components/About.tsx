@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-regular-svg-icons";
 
 import jsLogo from "../assets/jsLogo.png";
 import reactLogo from "../assets/reactLogo.png";
@@ -91,7 +89,6 @@ const About: React.FC = () => {
             <div className="flex items-center">
               <span className="block w-60 h-px mt-10 bg-gray-400 mr-3"></span>
               <h2 className="text-5xl font-bold pb-8 pt-16">about me</h2>
-              <FontAwesomeIcon icon={faStar} className="text-2xl mt-8 ml-2"/>
             </div>
             <div className="flex flex-col gap-2 text-right">
               <p>
