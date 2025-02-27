@@ -12,10 +12,19 @@ const fadeUpVariants = {
   },
 };
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  }
+};
+
 const Hero: React.FC = () => {
   return (
     <section className="min-h-screen flex flex-col items-start justify-center pl-48 ">
-      <motion.div initial="hidden" animate="visible" variants={fadeUpVariants}>
+      <motion.div initial="hidden" animate="visible" variants={containerVariants}>
         <motion.h1
           variants={fadeUpVariants}
           className="text-6xl font-semibold text-gray-700"
@@ -42,17 +51,16 @@ const Hero: React.FC = () => {
           <FontAwesomeIcon icon={faLocationDot} className="text-[#ecbfb1]" />{" "}
           Vancouver, BC
         </motion.p>
+        <motion.a
+          variants={fadeUpVariants}
+          className="mt-8 inline-block bg-[#ecbfb1] text-white font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300"
+          href="#about"
+          whileHover={{ scale: 1, y: -3 }}
+        >
+          get to know me!
+        </motion.a>
       </motion.div>
 
-      <motion.a
-        href="#about"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 1.25, repeat: Infinity, ease: "easeInOut" }}
-        whileHover={{ scale: 1.2, y: -3 }}
-        className="mt-8 inline-block bg-[#ecbfb1] text-white font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300"
-      >
-        get to know me!
-      </motion.a>
     </section>
   );
 };

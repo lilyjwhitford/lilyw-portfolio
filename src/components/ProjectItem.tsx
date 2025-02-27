@@ -43,11 +43,15 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   const isRightAligned = name === "Mrkt" || name === "PhotoLabs";
 
   return (
-    <div
+    <motion.div
       className={`flex flex-col p-6 lg:items-center ${extraSpacing} ${
         opposite ? "lg:flex-row-reverse" : "lg:flex-row"}
-        ${isRightAligned ? "lg:text-right" : "lg:text-left"}
-    `}>
+        ${isRightAligned ? "lg:text-right" : "lg:text-left"}`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        >
       <div
         className={`relative flex-1 flex items-center justify-center ${containerStyles}`}
       >
@@ -58,6 +62,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
+            whileHover={{ scale: 1.04 }}
             className="absolute w-full h-full flex items-center justify-center z-10"
           >
            <div className="p-2 border border-gray-300 shadow-md rounded-2xl">
@@ -100,7 +105,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
