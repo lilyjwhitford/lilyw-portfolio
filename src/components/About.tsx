@@ -9,7 +9,7 @@ import tsLogo from "../assets/tsLogo.png";
 import postgresqlLogo from "../assets/postgresqlLogo.png";
 import figmaLogo from "../assets/figmaLogo.png";
 import gitLogo from "../assets/gitLogo.png";
-import itMe from "../assets/itMe.png";
+import itMe from "../assets/itMe.jpeg";
 
 type Logo = {
   src: string;
@@ -85,13 +85,12 @@ const About: React.FC = () => {
         variants={containerVariants}
       >
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center mb-16">
-          <div className="flex justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-16">
+          <div className="flex justify-center py-8">
             <motion.img
               src={itMe}
-              alt="picture of me holding flowers"
-              className="w-2/3 h-auto object-contain"
-              whileHover={{ scale: 1.05 }}
+              alt="picture of me with toad lol"
+              className="w-1/2 h-auto object-contain rounded-3xl shadow-lg filter grayscale hover:grayscale-0 transition duration-500"
               transition={{ duration: 0.4 }}
             />
           </div>
@@ -117,8 +116,7 @@ const About: React.FC = () => {
                   What started as a way to express myself online quickly turned into a drive to build
                   and create in a meaningful way, transforming my internet addiction into an awesome career. Since then, I've been sharpening my skills in front-end development and
                   embracing new technologies with each project. When I'm not coding, you can find me
-                  exploring new restaurants, hitting the gym, or critiquing movies on
-                  Letterboxd!
+                  exploring different restaurants and breweries, hitting the gym, or reading!
                 </p>
               </div>
             </motion.div>
