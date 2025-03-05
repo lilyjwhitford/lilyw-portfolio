@@ -12,6 +12,15 @@ import pl1 from "../assets/photolabs/pl1.png";
 import pl2 from "../assets/photolabs/pl2.png";
 import pl3 from "../assets/photolabs/pl3.png";
 import pl4 from "../assets/photolabs/pl4.png";
+import jsLogo from "../assets/jsLogo.png";
+import reactLogo from "../assets/reactLogo.png";
+import tailwindcssLogo from "../assets/tailwindcssLogo.png";
+import nodejsLogo from "../assets/nodejsLogo.png";
+import tsLogo from "../assets/tsLogo.png";
+import postgresqlLogo from "../assets/postgresqlLogo.png";
+import figmaLogo from "../assets/figmaLogo.png";
+import gitLogo from "../assets/gitLogo.png";
+
 
 export const projects = [
   {
@@ -42,3 +51,53 @@ export const projects = [
     github: "https://github.com/lilyjwhitford/PhotoLabs",
   },
 ];
+
+
+type Logo = {
+  src: string;
+  alt: string;
+  title: string;
+};
+
+export const logos: Record<string, Logo> = {
+  javascript: {
+    src: jsLogo,
+    alt: "Javascript",
+    title: "Javascript",
+  },
+  react: {
+    src: reactLogo,
+    alt: "React",
+    title: "React",
+  },
+  tailwindcss: {
+    src: tailwindcssLogo,
+    alt: "Tailwind CSS",
+    title: "Tailwind CSS",
+  },
+  nodejs: {
+    src: nodejsLogo,
+    alt: "Node.js",
+    title: "Node.js",
+  },
+  typescript: {
+    src: tsLogo,
+    alt: "Typescript",
+    title: "Typescript",
+  },
+  postgresql: {
+    src: postgresqlLogo,
+    alt: "PostgreSQL",
+    title: "PostgreSQL",
+  },
+  figma: {
+    src: figmaLogo,
+    alt: "Figma",
+    title: "Figma",
+  },
+  git: {
+    src: gitLogo,
+    alt: "Git",
+    title: "Git",
+  },
+};

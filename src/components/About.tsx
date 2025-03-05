@@ -1,64 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-import jsLogo from "../assets/jsLogo.png";
-import reactLogo from "../assets/reactLogo.png";
-import tailwindcssLogo from "../assets/tailwindcssLogo.png";
-import nodejsLogo from "../assets/nodejsLogo.png";
-import tsLogo from "../assets/tsLogo.png";
-import postgresqlLogo from "../assets/postgresqlLogo.png";
-import figmaLogo from "../assets/figmaLogo.png";
-import gitLogo from "../assets/gitLogo.png";
 import itMe from "../assets/itMe.jpeg";
-
-type Logo = {
-  src: string;
-  alt: string;
-  title: string;
-};
-
-const logos: Record<string, Logo> = {
-  javascript: {
-    src: jsLogo,
-    alt: "Javascript",
-    title: "Javascript",
-  },
-  react: {
-    src: reactLogo,
-    alt: "React",
-    title: "React",
-  },
-  tailwindcss: {
-    src: tailwindcssLogo,
-    alt: "Tailwind CSS",
-    title: "Tailwind CSS",
-  },
-  nodejs: {
-    src: nodejsLogo,
-    alt: "Node.js",
-    title: "Node.js",
-  },
-  typescript: {
-    src: tsLogo,
-    alt: "Typescript",
-    title: "Typescript",
-  },
-  postgresql: {
-    src: postgresqlLogo,
-    alt: "PostgreSQL",
-    title: "PostgreSQL",
-  },
-  figma: {
-    src: figmaLogo,
-    alt: "Figma",
-    title: "Figma",
-  },
-  git: {
-    src: gitLogo,
-    alt: "Git",
-    title: "Git",
-  },
-};
+import { logos } from "../helpers/data";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -114,7 +57,7 @@ const About: React.FC = () => {
                 </p>
                 <p className="mt-4">
                   What started as a way to express myself online quickly turned into a drive to build
-                  and create in a meaningful way, transforming my internet addiction into an awesome career. Since then, I've been sharpening my skills in front-end development and
+                  and create in a meaningful way, transforming my internet addiction into an awesome career. Since then, I've been sharpening my skills in development and
                   embracing new technologies with each project. When I'm not coding, you can find me
                   exploring different restaurants and breweries, hitting the gym, or reading!
                 </p>
