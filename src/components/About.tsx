@@ -9,16 +9,6 @@ const fadeUpVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-// stagger children for a nice effect
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  }
-};
-
 // hover animations
 const blockVariants = {
   rest: { x: 0, y: 0 },
@@ -37,7 +27,7 @@ const About: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        variants={containerVariants}
+        variants={fadeUpVariants}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-16">
           {/* img column */}
