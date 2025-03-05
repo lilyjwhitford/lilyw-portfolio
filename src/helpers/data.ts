@@ -35,7 +35,7 @@ export const projects = [
   {
     id: 3,
     name: "PhotoLabs",
-    description: "PhotoLabs is an engaging React-based single-page application (SPA) designed to offer users an immersive photo-viewing experience. By leveraging a pre-existing API, we can craft an interactive frontend where users can explore and interact with a variety of photos.",
+    description: "PhotoLabs is an engaging React-based single-page application (SPA) designed to offer users an immersive photo-viewing experience. By leveraging a pre-existing API, PhotoLabs has an interactive frontend where users can explore and interact with a variety of photos.",
     techStack: "React, Express, PostgreSQL, Node.js, SaSS",
     images: [pl1, pl2, pl3, pl4],
     platform: "desktop",

@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
         </motion.p>
         <motion.a
           variants={fadeUpVariants}
-          className="mt-8 inline-block bg-[#ecbfb1] text-white font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300"
+          className="mt-8 inline-block bg-[#ecbfb1] text-white font-semibold px-5 py-2 rounded-full shadow-md"
           href="#about"
           whileHover={{ scale: 1, y: -3 }}
         >
