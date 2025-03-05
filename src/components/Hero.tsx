@@ -23,7 +23,7 @@ const containerVariants = {
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col items-start justify-center pl-48 ">
+    <section className="min-h-screen flex flex-col items-start justify-center pl-72">
       <motion.div initial="hidden" animate="visible" variants={containerVariants}>
         <motion.h1
           variants={fadeUpVariants}
