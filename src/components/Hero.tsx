@@ -23,30 +23,30 @@ const containerVariants = {
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col items-start justify-center pl-72">
+    <section className="min-h-screen flex flex-col items-start justify-center px-6 md:px-20 lg:px-32 xl:pl-72">
       <motion.div initial="hidden" animate="visible" variants={containerVariants}>
         <motion.h1
           variants={fadeUpVariants}
-          className="text-6xl font-semibold text-gray-700"
+          className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-700 text-center md:text-left"
         >
           Hi! I'm{" "}
           <span className="text-[#ecbfb1]">Lily</span>
         </motion.h1>
         <motion.h1
           variants={fadeUpVariants}
-          className="text-7xl font-bold text-gray-800 pt-2"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 pt-2 text-center md:text-left"
         >
           Full-Stack Web Developer
         </motion.h1>
         <motion.p
           variants={fadeUpVariants}
-          className="text-xl text-gray-700 pt-2 text-left"
+          className="text-xl text-gray-700 pt-2 text-center md:text-left"
         >
           Passionate about designing seamless user experiences.
         </motion.p>
         <motion.p
           variants={fadeUpVariants}
-          className="text-xl text-gray-700 pt-2 text-left"
+          className="text-xl text-gray-700 pt-2 text-center md:text-left"
         >
           <FontAwesomeIcon icon={faLocationDot} className="text-[#ecbfb1]" />{" "}
           Vancouver, BC
