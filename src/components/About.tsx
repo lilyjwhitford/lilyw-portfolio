@@ -29,7 +29,7 @@ const About: React.FC = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeUpVariants}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center lg:justify-items-start mb-16">
           {/* img column */}
           <div className="flex justify-center">
             <motion.div 
@@ -47,7 +47,7 @@ const About: React.FC = () => {
               <motion.img
                 src={itMe}
                 alt="picture of me with toad lol"
-                className="w-[18rem] h-auto object-contain rounded-3xl shadow-lg"
+                className="w-[14rem] md:w-[18rem] h-auto object-contain rounded-3xl shadow-lg"
                 variants={imageVariants}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               />
@@ -56,13 +56,13 @@ const About: React.FC = () => {
           {/* text column */}
           <div className="text-gray-600 max-w-lg flex items-start flex-col gap-6">
             <motion.div variants={fadeUpVariants}>
-              <div className="flex items-center pl-12">
-                <span className="block w-60 h-px mt-10 bg-gray-400 mr-3"></span>
-                <h2 className="text-5xl font-bold pb-8 pt-16">about me</h2>
+              <div className="flex items-center pl-6 md:pl-12">
+                <span className="block w-20 md:w-60 h-px mt-10 bg-gray-400 mr-3"></span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-8 pt-16">about me</h2>
               </div>
             </motion.div>
             <motion.div variants={fadeUpVariants}>
-              <div className="flex flex-col gap-2 text-right">
+              <div className="flex flex-col gap-2 text-center md:text-right">
                 <p>
                   Hello, friend! I'm Lily, a{" "}
                   <span className="text-[#e2a48f]">web developer</span> whose passion for coding began in Tumblr's prime era of 2013,
@@ -90,13 +90,13 @@ const About: React.FC = () => {
         variants={fadeUpVariants}
       >
         <div className="mt-12 flex items-center">
-          <div className="block w-60 h-px bg-gray-400"></div>
-          <p className="mx-4 font-bold text-gray-600 text-xl whitespace-nowrap">
+          <div className="block w-20 md:w-60 h-px bg-gray-400"></div>
+          <p className="mx-4 font-bold text-gray-600 text-lg md:text-xl whitespace-nowrap text-center">
             these are some technologies I enjoy:
           </p>
-          <div className="block w-60 h-px bg-gray-400"></div>
+          <div className="block w-20 md:w-60 h-px bg-gray-400"></div>
         </div>
-        <div className="mt-6 grid grid-cols-4 gap-4">
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {Object.entries(logos).map(([key, logo]) => (
             <motion.div
               key={key}
@@ -107,14 +107,14 @@ const About: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-12 h-12 mr-2">
+              <div className="w-10 md:w-12 h-10 md:h-12 mr-2">
                 <img
                   src={logo.src}
                   alt={logo.alt}
                   className="h-full w-full object-contain filter grayscale brightness-75"
                 />
               </div>
-              <p className="text-gray-700 text-sm font-medium">{logo.title}</p>
+              <p className="text-gray-700 text-xs md:text-sm font-medium">{logo.title}</p>
             </motion.div>
           ))}
         </div>
@@ -122,5 +122,6 @@ const About: React.FC = () => {
     </section>
   );
 };
+
 
 export default About;
