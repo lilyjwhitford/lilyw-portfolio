@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full flex items-end justify-end mb-8"
       >
-        <span className="block w-20 md:w-60 h-px bg-gray-400 mr-6 mb-8"></span>
+        <span className="block w-12 md:w-60 h-px bg-gray-400 mr-3 lg:mr-6 mb-8"></span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-600 font-bold relative top-4 pb-8 pr-6">
           some of my work
         </h2>
