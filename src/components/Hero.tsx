@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
         <div className="flex justify-center md:justify-start mt-4">
           <motion.a
             variants={fadeUpVariants}
-            className="inline-block self-center md:self-start bg-[#ecbfb1] text-white font-semibold mt-4 px-5 py-2 rounded-full shadow-md"
+            className="inline-block self-center md:self-start bg-[#ecbfb1] text-white font-semibold px-5 py-2 rounded-full shadow-md"
             href="#about"
             whileHover={{ scale: 1, y: -3 }}
           >
