@@ -29,7 +29,7 @@ const About: React.FC = () => {
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeUpVariants}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center lg:justify-items-start mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center  mb-16">
           {/* img column */}
           <div className="flex justify-center">
             <motion.div 
@@ -96,27 +96,29 @@ const About: React.FC = () => {
           </p>
           <div className="block w-20 md:w-60 h-px bg-gray-400"></div>
         </div>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {Object.entries(logos).map(([key, logo]) => (
-            <motion.div
-              key={key}
-              className="flex items-center border border-gray-300 rounded-md py-1 px-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0, transition: { duration: 1.0 } }}
-              viewport={{ once: true, amount: 0.5 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="w-10 md:w-12 h-10 md:h-12 mr-2">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-full w-full object-contain filter grayscale brightness-75"
-                />
-              </div>
-              <p className="text-gray-700 text-xs md:text-sm font-medium">{logo.title}</p>
-            </motion.div>
-          ))}
+        <div className="px-4 sm:px-6 md:px-10 xl:px-20">
+          <div className="mt-6 grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-4">
+            {Object.entries(logos).map(([key, logo]) => (
+              <motion.div
+                key={key}
+                className="flex items-center border border-gray-300 rounded-md py-2 px-2 w-full max-w-[180px] mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 1.0 } }}
+                viewport={{ once: true, amount: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="w-10 md:w-12 h-10 md:h-12 mr-2">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-full w-full object-contain filter grayscale brightness-75"
+                  />
+                </div>
+                <p className="text-gray-700 text-xs md:text-sm font-medium break-words text-center">{logo.title}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>
