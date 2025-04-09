@@ -55,7 +55,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       {/* image container */}
-      <div className={`relative flex-1 flex items-center justify-center py-24 sm:py-1 ${containerStyles}`}>
+      <div className={`relative flex-1 flex items-center justify-center py-24 sm:py-1 ${containerStyles}
+        ${isMrkt ? "translate-x-16 sm:translate-x-0" : ""
+        }`}
+      >
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
