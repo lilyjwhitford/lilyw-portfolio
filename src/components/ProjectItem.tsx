@@ -56,7 +56,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
     >
       {/* image container */}
       <div className={`relative flex-1 flex items-center justify-center py-24 sm:py-1 ${containerStyles}
-        ${isMrkt ? "translate-x-16 sm:translate-x-0" : ""
+        ${isMrkt ? "translate-x-[75px] sm:translate-x-0" : ""
         }`}
       >
         <AnimatePresence mode="wait">

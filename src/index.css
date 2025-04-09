@@ -6,9 +6,12 @@
 
 body {
   @apply font-figtree;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
+* {
+  box-sizing: border-box;
+}

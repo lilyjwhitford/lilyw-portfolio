@@ -35,7 +35,7 @@ const NavBar: React.FC = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "bg-white/50 shadow-md backdrop-blur-lg" : "bg-transparent"}`}
       >
         <NavbarBrand className="pl-4 md:pl-6 lg:pl-8 xl:pl-20">
-          <a href="#home" className="text-xl font-bold text-gray-800">lily whitford</a>
+          <a href="#home" className="text-xl font-bold text-gray-800">lily <span>&lt;/&gt;</span></a>
         </NavbarBrand>
 
         {/* desktop nav */}
@@ -48,10 +48,11 @@ const NavBar: React.FC = () => {
         </NavbarContent>
 
         {/* mobile menu button */}
-        <div className="md:hidden text-gray-800 z-50 ml-auto mr-4">
+        <div className="md:hidden flex items-center justify-end pr-4 relative z-50">
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
             aria-label="toggle menu" 
+            className="text-gray-800 hover:text-[#ecbfb1] transition"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -59,8 +60,8 @@ const NavBar: React.FC = () => {
 
         {/* mobile menu */}
         <div
-          className={`fixed top-0 right-0 h-screen w-2/3 bg-white/50 backdrop-blur-lg shadow-lg z-40 flex flex-col items-center pt-24 gap-6 transition-transform duration-300 transform ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 h-screen w-2/3 bg-white/80 backdrop-blur-lg shadow-lg z-40 flex flex-col items-center pt-24 gap-6 transition-transform duration-300 transform ${
+            isMenuOpen ? "translate-x-0" : "translate-x-[100vw]"
           }`}
         >
           {["home", "about", "projects", "contact"].map((label) => (
